@@ -1,0 +1,14 @@
+res.setatus(201).send({})
+
+200 - ok (tudo que dá certo por padrão ele envia 200 já)
+201 - created (ex usuário criado)
+202 - Accepted (ainda n processei ou fiz outra coisa mas aceitei)
+
+400 - Bad request
+401 - Unauthorized -- AUTENTICAÇÃO, tem caráter temporário (porque pode ser logar de novo que acaba e etc)
+403 - Forbidden -- AUTORIZAÇÃO, caráter permanente (um usuário qqr nunca pode ser ADMIN)
+404 - Not Found (n tem o end point, n tem a página)
+
+500 - Internal server erro (preocupante Erro geral, deu pau na API)
+501 - Not implemented (a API n suporta essa funcionalidade)
+503 - service Unavailable (serviço indisponível - a API executa essa operação, mas no momento está indisponível)
