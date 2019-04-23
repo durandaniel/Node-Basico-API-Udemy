@@ -2,9 +2,10 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const config = require('./config/config.js')
 
 //string de conexão 
-        const url = 'mongodb+srv://usuario_admin:danielavd@clusterapi-tnqa4.mongodb.net/test?retryWrites=true' //copiada do se4rvidor atlass
+        const url = config.bd_string //copiada do se4rvidor atlass
         const options = { reconnectTries: Number.MAX_VALUE, reconnectInterval: 500, poolSize: 5, useNewUrlParser: true}; 
 
         mongoose.connect(url, options);
